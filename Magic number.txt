@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String []args){
+        Scanner mkc=new Scanner(System.in);
+        int a=mkc.nextInt();
+        int sum=0;
+        int num;
+        int rev=0;
+        while(a>0){
+            num=a%10;
+            sum=num+sum;
+            a=a/10;
+        }
+        int x=sum;
+        while(sum>0){
+            int y=sum%10;
+            rev=(rev*10)+y;
+            sum=sum/10;
+        }
+        System.out.println((rev*sum==a)?"Magic":"Not magic");
+    }
+}
